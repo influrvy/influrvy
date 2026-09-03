@@ -17,3 +17,48 @@ body{position:relative;overflow-x:hidden}.aero-shards{position:fixed;inset:0;poi
 #dotgrid{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.62}
 .glow{display:none!important}
 
+/* Closing contact panel */
+.contact{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:440px;
+  padding:78px max(42px,calc((100vw - 1120px)/2)) 32px;
+  background:
+    radial-gradient(circle at 83% 15%,#875cff50,transparent 29%),
+    radial-gradient(circle at 8% 100%,#78e8e126,transparent 34%),
+    linear-gradient(125deg,#0d1020 0%,#171635 48%,#25154d 100%);
+  border-top:1px solid #ffffff18;
+  border-bottom:1px solid #ffffff18;
+}
+.contact:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  opacity:.42;
+  background-image:linear-gradient(#ffffff09 1px,transparent 1px),linear-gradient(90deg,#ffffff09 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:linear-gradient(90deg,#000,transparent 78%);
+}
+.contact-grid{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:50px}
+.contact-copy{max-width:720px}
+.contact .eyebrow{margin-bottom:14px}
+.contact-status{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid #78e8e144;border-radius:999px;color:#b9c4d5;font-size:10px;letter-spacing:.8px;text-transform:uppercase;background:#06081752}
+.contact-status i{width:7px;height:7px;border-radius:50%;background:#78e8e1;box-shadow:0 0 0 0 #78e8e177;animation:statusPulse 2s infinite}
+.contact h2{margin:22px 0 16px;font-size:clamp(48px,6.2vw,88px);line-height:.89;letter-spacing:-5px;font-weight:500}
+.contact h2 em{font-style:normal;background:linear-gradient(100deg,#b695ff,#7347ff 55%,#78e8e1);background-clip:text;-webkit-background-clip:text;color:transparent}
+.contact-note{max-width:430px;margin:0;color:#c3c5d2;font-size:14px;line-height:1.6}
+.contact-cta{position:relative;display:flex;align-items:center;justify-content:space-between;gap:22px;min-width:245px;padding:8px 9px 8px 22px;border-radius:999px;background:#effffc;color:#080912;font-size:13px;font-weight:700;box-shadow:0 14px 38px #0005,0 0 0 1px #78e8e166;transition:transform .32s cubic-bezier(.2,.8,.2,1),box-shadow .32s,background .32s}
+.contact-cta:before{content:"";position:absolute;inset:-2px;border-radius:inherit;background:linear-gradient(100deg,#78e8e1,#8962ff,#78e8e1);background-size:220% 100%;z-index:-1;opacity:.8;filter:blur(5px);transition:opacity .3s}
+.contact-cta b{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#15132c;color:#78e8e1;font-size:20px;transition:transform .32s,background .32s,color .32s}
+.contact-cta:hover{transform:translateY(-7px) scale(1.025);background:#ffffff;box-shadow:0 22px 55px #875cff73,0 0 0 1px #78e8e1}
+.contact-cta:hover:before{opacity:1;animation:ctaGlow 1.3s linear infinite}
+.contact-cta:hover b{transform:rotate(45deg);background:#78e8e1;color:#101224}
+.contact-signals{position:relative;z-index:2;display:flex;align-items:center;gap:10px;margin-top:65px;color:#a9aec2;font-size:9px;letter-spacing:1.4px}.contact-signals i{display:block;width:30px;height:1px;background:linear-gradient(90deg,#78e8e1,#8b5cff55)}
+.contact-orbit{position:absolute;border:1px solid #78e8e12e;border-radius:50%;pointer-events:none;z-index:1}.orbit-one{width:500px;height:500px;right:-130px;top:-225px;animation:orbitDrift 10s ease-in-out infinite}.orbit-two{width:260px;height:260px;right:12%;bottom:-190px;border-color:#9b79ff3e;animation:orbitDrift 7s ease-in-out -2s infinite reverse}
+@keyframes statusPulse{50%{box-shadow:0 0 0 8px #78e8e100}}
+@keyframes orbitDrift{50%{transform:translate(-22px,18px) scale(1.08);opacity:.45}}
+@keyframes ctaGlow{to{background-position:220% 0}}
+@media(max-width:760px){.contact{min-height:0;padding:58px 24px 26px}.contact-grid{display:block}.contact h2{letter-spacing:-3px}.contact-cta{width:100%;margin-top:34px}.contact-signals{margin-top:50px;gap:7px;flex-wrap:wrap}.contact-signals i{width:18px}.orbit-one{width:320px;height:320px;right:-150px;top:-135px}.orbit-two{display:none}}
+
