@@ -1,0 +1,7 @@
+(() => {
+  const canvas = document.getElementById('dotfield'); if (!canvas) return;
+  const ctx = canvas.getContext('2d'); const mouse={x:-1000,y:-1000,px:-1000,py:-1000,speed:0}; let dots=[];
+  function resize(){const dpr=Math.min(devicePixelRatio||1,2);canvas.width=innerWidth*dpr;canvas.height=innerHeight*dpr;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(dpr,0,0,dpr,0,0);dots=[];for(let y=7;y<innerHeight;y+=14)for(let x=7;x<innerWidth;x+=14)dots.push({x,y,tx:x,ty:y})}
+  addEventListener('resize',resize); addEventListener('pointermove',e=>{mouse.x=e.clientX;mouse.y=e.clientY},{passive:true}); resize();
+  function render(time){const moved=Math.hypot(mouse.x-mouse.px,mouse.y-mouse.py);mouse.speed+=(moved-mouse.speed)*.15;mouse.px=mouse.x;mouse.py=mouse.y;ctx.clearRect(0,0,innerWidth,innerHeight);const g=ctx.createLinearGradient(0,0,innerWidth,innerHeight);g.addColorStop(0,'rgba(168,85,247,.32)');g.addColorStop(1,'rgba(120,232,225,.22)');ctx.fillStyle=g;ctx.beginPath();const engagement=Math.min(mouse.speed/5,1);for(const d of dots){const dx=mouse.x-d.x,dy=mouse.y-d.y,dist=Math.hypot(dx,dy),inf=Math.max(0,1-dist/220),push=inf*inf*55*engagement,a=Math.atan2(dy,dx);d.tx+=(d.x-Math.cos(a)*push-d.tx)*.14;d.ty+=(d.y-Math.sin(a)*push-d.ty)*.14;const wave=Math.sin(time*.001+d.x*.018)*.8;ctx.moveTo(d.tx+1.5,d.ty+wave);ctx.arc(d.tx,d.ty+wave,1.5,0,Math.PI*2)}ctx.fill();requestAnimationFrame(render)}requestAnimationFrame(render);
+})();
