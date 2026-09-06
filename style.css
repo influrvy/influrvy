@@ -117,11 +117,11 @@ body.viewer-open{overflow:hidden}
   overflow:hidden;
   text-overflow:ellipsis;
 }
-.viewer-tools .viewer-close{
+.viewer-tools button.viewer-close{
   position:relative;
   inset:auto;
   flex:0 0 auto;
-  display:grid;
+  display:grid!important;
   place-items:center;
   width:44px;
   height:44px;
@@ -134,7 +134,7 @@ body.viewer-open{overflow:hidden}
   font:300 29px/1 Arial,sans-serif;
   transition:transform .2s,background .2s,color .2s,border-color .2s;
 }
-.viewer-tools .viewer-close:hover{transform:rotate(90deg) scale(1.06);background:#78e8e1;color:#080912;border-color:#78e8e1}
+.viewer-tools button.viewer-close:hover{transform:rotate(90deg) scale(1.06);background:#78e8e1;color:#080912;border-color:#78e8e1}
 .image-frame{
   width:100vw;
   height:100%;
@@ -185,7 +185,7 @@ body.viewer-open{overflow:hidden}
   .viewer-tools{height:58px;padding:0 10px 0 14px}
   .viewer-title{gap:9px}.viewer-title>span{display:none}
   .viewer-title p,.modal .viewer-title p{font-size:12px}
-  .viewer-tools .viewer-close{width:42px;height:42px;font-size:28px}
+  .viewer-tools button.viewer-close{display:grid!important;width:42px;height:42px;font-size:28px}
   .image-frame{width:100vw;height:100%}
   .image-frame::-webkit-scrollbar{width:5px}
   .scroll-hint{bottom:12px}
