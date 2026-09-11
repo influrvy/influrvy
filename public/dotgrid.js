@@ -70,9 +70,12 @@
       dot.flash *= 0.94;
       const glow = Math.max(near, dot.flash);
       const alpha = 0.18 + glow * 0.62;
-      const red = Math.round(120 + (120 - 120) * glow);
-      const green = Math.round(95 + (232 - 95) * glow);
-      const blue = Math.round(180 + (225 - 180) * glow);
+      const isLight = document.documentElement.dataset.theme === 'light';
+      const base = isLight ? [109, 86, 204] : [120, 95, 180];
+      const active = isLight ? [116, 76, 240] : [120, 232, 225];
+      const red = Math.round(base[0] + (active[0] - base[0]) * glow);
+      const green = Math.round(base[1] + (active[1] - base[1]) * glow);
+      const blue = Math.round(base[2] + (active[2] - base[2]) * glow);
       ctx.fillStyle = `rgba(${red},${green},${blue},${alpha})`;
       ctx.beginPath();
       ctx.arc(dot.x, dot.y, settings.radius + glow * 1.2, 0, Math.PI * 2);

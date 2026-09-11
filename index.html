@@ -15,6 +15,7 @@
     <title>Influrvy — Portfólio</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/theme.css" />
   </head>
   <body>
     <div class="glow"></div>
@@ -27,6 +28,11 @@
         <a href="#projetos">Projetos</a><a href="#processo">Processo</a
         ><a href="#planos">Planos</a><a href="#contato">Contato</a>
       </nav>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Ativar modo claro" title="Ativar modo claro">
+        <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2.2M12 19.8V22M4.93 4.93l1.56 1.56M17.51 17.51l1.56 1.56M2 12h2.2M19.8 12H22M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56"/></svg>
+        <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.2A8.6 8.6 0 0 1 8.8 3.5a8.6 8.6 0 1 0 11.7 11.7Z"/></svg>
+        <span class="theme-toggle-label">Modo claro</span>
+      </button>
       <a class="navcta" href="https://contate.me/5511914288729" target="_blank"
         >Vamos conversar ↗</a
       >
@@ -883,6 +889,7 @@
         .forEach((e) => reveal.observe(e));
     </script>
     <script src="/dotgrid.js"></script>
+    <script src="/theme.js"></script>
     <script>
       function openCase() {
         caseModal.classList.add("show");
