@@ -179,6 +179,19 @@
 
     <div class="ops-flow-wrap">
       <p class="eyebrow">Uma operação conectada</p>
+      <div class="ops-constellation" aria-label="As frentes da operação digital se conectam em uma única estrutura">
+        <div class="ops-constellation-grid" aria-hidden="true"></div>
+        <div class="ops-orbit ops-orbit-one" aria-hidden="true"><i></i></div>
+        <div class="ops-orbit ops-orbit-two" aria-hidden="true"><i></i></div>
+        <div class="ops-orbit ops-orbit-three" aria-hidden="true"><i></i></div>
+        <div class="ops-core"><small>INFLURVY</small><strong>operação<br>conectada</strong><i></i></div>
+        <div class="ops-orbit-node node-strategy"><span>01</span><b>Estratégia</b></div>
+        <div class="ops-orbit-node node-presence"><span>02</span><b>Presença digital</b></div>
+        <div class="ops-orbit-node node-service"><span>03</span><b>Atendimento IA</b></div>
+        <div class="ops-orbit-node node-content"><span>04</span><b>Conteúdo</b></div>
+        <div class="ops-orbit-node node-growth"><span>05</span><b>Crescimento</b></div>
+        <p>Uma marca, cinco frentes em movimento.</p>
+      </div>
       <div class="ops-flow" aria-label="Fluxo da operação digital">
         <div><b>01</b><span>Presença<br>digital</span></div>${icons.arrow}
         <div><b>02</b><span>Vitrine, pedidos<br>e agendamentos</span></div>${icons.arrow}
