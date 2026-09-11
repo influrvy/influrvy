@@ -1,0 +1,32 @@
+/* Final contrast layer. Kept after the operation module so the light theme remains legible. */
+html[data-theme="light"] .ops-command{color:#211e34}
+html[data-theme="light"] .ops-command-top{color:#625d74!important;background:#ffffffb8!important;border-color:#29224c1c!important}
+html[data-theme="light"] .ops-live{color:#373149!important}
+html[data-theme="light"] .ops-tabs{background:#f4f2fa!important;border-color:#29224c18!important}
+html[data-theme="light"] .ops-tabs button{color:#5b5c70!important}
+html[data-theme="light"] .ops-tabs button:hover{color:#211c35!important;background:#ffffff!important}
+html[data-theme="light"] .ops-tabs button.active{color:#1e1931!important;border-color:#58a55655!important;background:linear-gradient(100deg,#58a55616,#744cf012)!important}
+html[data-theme="light"] .ops-tabs button b{color:#666176!important}
+html[data-theme="light"] .ops-tabs button.active b{color:#3c943c!important}
+html[data-theme="light"] .ops-tabs button svg{color:#77748a!important}
+html[data-theme="light"] .ops-tabs button.active svg{color:#3c943c!important}
+html[data-theme="light"] .ops-panel-head h3{color:#1b182d!important}
+html[data-theme="light"] .ops-panel-head>p{color:#595d72!important}
+html[data-theme="light"] .ops-number{color:#398e3a!important}
+html[data-theme="light"] .ops-checks li{color:#39384c!important;border-color:#2b245017!important}
+html[data-theme="light"] .ops-checks li svg{color:#3d9b42!important}
+html[data-theme="light"] .ops-feature-callout{color:#252137!important;border-color:#58a55642!important;background:linear-gradient(100deg,#58a55612,#744cf00e)!important}
+html[data-theme="light"] .ops-feature-callout h4{color:#252137!important}
+html[data-theme="light"] .ops-feature-callout p,html[data-theme="light"] .ops-feature-callout>span{color:#5b5d70!important}
+html[data-theme="light"] .ops-dashboard{color:#28243a!important;border-color:#2c255226!important;background:#ffffff!important}
+html[data-theme="light"] .ops-dash-head span,html[data-theme="light"] .ops-kpis small,html[data-theme="light"] .ops-chart-head small{color:#646276!important}
+html[data-theme="light"] .ops-kpis>div,html[data-theme="light"] .ops-chart{background:#f7f6fb!important;border-color:#2c25521c!important}
+html[data-theme="light"] .ops-mini-card{color:#28243a!important;background:#ffffff!important;border-color:#2c25521c!important}
+html[data-theme="light"] .ops-mini-card p{color:#5c5f71!important}
+html[data-theme="light"] .ops-growth-grid>article{color:#28243a!important;background:linear-gradient(145deg,#ffffff,#f3f1fb)!important;border-color:#2c255222!important}
+html[data-theme="light"] .ops-growth-grid .ops-checks li,html[data-theme="light"] .ops-media-note{color:#5b5e70!important}
+html[data-theme="light"] .ops-flow{background:#ffffff!important;border-color:#2c255222!important}
+html[data-theme="light"] .ops-flow>div span{color:#363347!important}
+html[data-theme="light"] .ops-flow>svg{color:#777286!important}
+html[data-theme="light"] .ops-closing p{color:#1a172b!important}
+html[data-theme="light"] .ops-closing p em{color:#744cf0!important}
