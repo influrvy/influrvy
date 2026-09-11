@@ -17,7 +17,7 @@
 
   const escape = (value) => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' })[char]);
   const positions = ['0% 0%', '50% 0%', '100% 0%', '0% 50%', '50% 50%', '100% 50%', '0% 100%', '50% 100%', '100% 100%'];
-  const feed = (study) => positions.map((position, index) => `<figure class="case-feed-post"><i style="background-image:url('/cases/${study.social}');background-position:${position}"></i>${index === 4 ? '<b>conteúdo<br>demonstrativo</b>' : ''}</figure>`).join('');
+  const feed = (study) => positions.map((position) => `<figure class="case-feed-post" style="background-image:url('/cases/${study.social}');background-position:${position}"></figure>`).join('');
   const socialUrl = (study) => `/cases/${study.social}`;
 
   const render = (study) => `
