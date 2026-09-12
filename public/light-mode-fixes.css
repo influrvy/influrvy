@@ -36,3 +36,18 @@ html[data-theme="light"] .ops-orbit{border-color:#51457238!important}
 html[data-theme="light"] .ops-orbit-node{border-color:#2c255227!important;background:#fffffff2!important;color:#29233e!important;box-shadow:0 12px 24px #2e275318!important}
 html[data-theme="light"] .ops-orbit-node:hover{background:#fff!important;border-color:#744cf055!important}
 html[data-theme="light"] .ops-constellation>p{color:#5b5f71!important}
+
+/* Bright controls and product previews: especially important on small screens. */
+html[data-theme="light"] .ops-browser-visual{border-color:#2c255226!important;background:#fff!important;box-shadow:0 18px 42px #2d25521c!important}
+html[data-theme="light"] .ops-browser-bar{border-color:#2c255218!important;background:#f0eff7!important}
+html[data-theme="light"] .ops-browser-bar span{background:#ffffff!important;color:#625d75!important}
+html[data-theme="light"] .ops-browser-body{background:radial-gradient(circle at 85% 20%,#744cf02e,transparent 34%),linear-gradient(145deg,#fbfaff,#ece8ff)!important;color:#211c36!important}
+html[data-theme="light"] .ops-browser-body strong{color:#211c36!important}
+html[data-theme="light"] .ops-browser-body:after{border-color:#744cf052!important;box-shadow:0 0 0 18px #744cf00c!important}
+html[data-theme="light"] .ops-browser-body>span{color:#397f3a!important}
+html[data-theme="light"] .ops-browser-body>div i{background:#30294a18!important}
+html[data-theme="light"] .ops-browser-body>div i:first-child{background:#744cf0!important}
+html[data-theme="light"] .plan-card p,html[data-theme="light"] .plan-card li{color:#55566a!important}
+html[data-theme="light"] .plan-card>a{min-height:46px;margin-top:22px;padding:0 14px;border:1px solid #52a65052!important;border-radius:12px!important;background:linear-gradient(135deg,#4fa94f,#75c861)!important;color:#0d2211!important;box-shadow:0 10px 22px #4eaa4d29!important}
+html[data-theme="light"] .plan-card>a span{color:#0d2211!important}
+html[data-theme="light"] .plan-card>a:hover{color:#07160a!important;background:linear-gradient(135deg,#67bd58,#91d86d)!important}
