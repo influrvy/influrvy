@@ -19,8 +19,20 @@
   const positions = ['0% 0%', '50% 0%', '100% 0%', '0% 50%', '50% 50%', '100% 50%', '0% 100%', '50% 100%', '100% 100%'];
   const feed = (study) => positions.map((position) => `<figure class="case-feed-post" style="background-image:url('/cases/${study.social}');background-position:${position}"></figure>`).join('');
   const socialUrl = (study) => `/cases/${study.social}`;
-  // Paid media uses its own campaign visual. Reels deliberately keep the social image above.
-  const paidCreativeUrl = (study) => `/cases/${study.social.replace('.atelier-social.png', '-paid-creative.png').replace('-social.png', '-paid-creative.png')}`;
+  // Paid media uses platform-specific campaign visuals. Reels deliberately keep the social image above.
+  const paidCreatives = {
+    'andra-social.png': { instagram: 'andra-paid-creative.png', facebook: 'andra-facebook-creative.png' },
+    'santil-social.png': { instagram: 'santil-paid-creative.png', facebook: 'santil-facebook-creative.png' },
+    'fogoes-social.png': { instagram: 'fogoes-paid-creative.png', facebook: 'fogoes-facebook-creative.png' },
+    'manihi-social.png': { instagram: 'manihi-paid-creative.png', facebook: 'manihi-facebook-creative.png' },
+    'flying.sushi-social.png': { instagram: 'flying-paid-creative.png', facebook: 'flying-facebook-creative.png' },
+    'pasteis-social.png': { instagram: 'pasteis-paid-creative.png', facebook: 'pasteis-facebook-creative.png' },
+    'veridiana.atelier-social.png': { instagram: 'veridiana-paid-creative.png', facebook: 'veridiana-facebook-creative.png' },
+    'camila-social.png': { instagram: 'camila-paid-creative.png', facebook: 'camila-facebook-creative.png' },
+    'frison-social.png': { instagram: 'frison-paid-creative.png', facebook: 'frison-facebook-creative.png' },
+    'mayara.vianna-social.png': { instagram: 'mayara-paid-creative.png', facebook: 'mayara-facebook-creative.png' }
+  };
+  const paidCreativeUrl = (study, platform) => `/cases/${paidCreatives[study.social][platform]}`;
 
   const render = (study) => `
     <div class="case-shell case-study-shell" style="--case-accent:${study.accent};--case-wash:${study.wash};--case-deep:${study.deep}">
@@ -57,7 +69,7 @@
           </div>
           <div class="case-view" data-study-view="traffic">
             <div class="case-channel-intro"><span>04</span><p>Criativos de mídia<br><b>Uma campanha que parece nativa em cada plataforma.</b></p></div>
-            <div class="case-paid-stage"><div class="case-channel-copy"><small>CAMPANHA DEMONSTRATIVA</small><h3>O mesmo posicionamento,<br><em>dois contextos reais.</em></h3><p>O criativo leva a identidade da marca sem transformar a plataforma em uma peça de propaganda.</p></div><div class="case-ad-pair"><article class="case-ad instagram-ad"><header><b>Instagram</b><span>⌁</span></header><div class="ad-author"><i>${escape(study.mono)}</i><div><b>${escape(study.handle)}</b><small>Patrocinado</small></div><em>•••</em></div><div class="ad-visual" style="background-image:url('${paidCreativeUrl(study)}')"><div><small>${escape(study.name).toUpperCase()}</small><b>${escape(study.ad)}</b></div></div><footer><span>♡</span><span>◯</span><span>⌁</span><b>Saiba mais</b></footer></article><article class="case-ad facebook-ad"><header><b>facebook</b><span>＋　⌕　☵</span></header><div class="fb-tabs"><b>⌂</b><span>▱</span><span>♧</span><span>▣</span></div><div class="ad-author"><i>${escape(study.mono)}</i><div><b>${escape(study.name)}</b><small>Patrocinado · ◉</small></div><em>•••</em></div><p>${escape(study.ad)}</p><div class="ad-visual" style="background-image:url('${paidCreativeUrl(study)}')"><div><small>PROJETO DEMONSTRATIVO</small><b>${escape(study.headline)}</b></div></div><footer><span>♡ Curtir</span><span>◯ Comentar</span><b>Saiba mais</b></footer></article></div></div>
+            <div class="case-paid-stage"><div class="case-channel-copy"><small>CAMPANHA DEMONSTRATIVA</small><h3>O mesmo posicionamento,<br><em>dois contextos reais.</em></h3><p>O criativo leva a identidade da marca sem transformar a plataforma em uma peça de propaganda.</p></div><div class="case-ad-pair"><article class="case-ad instagram-ad"><header><b>Instagram</b><span>⌁</span></header><div class="ad-author"><i>${escape(study.mono)}</i><div><b>${escape(study.handle)}</b><small>Patrocinado</small></div><em>•••</em></div><div class="ad-visual" style="background-image:url('${paidCreativeUrl(study, 'instagram')}')"><div><small>${escape(study.name).toUpperCase()}</small><b>${escape(study.ad)}</b></div></div><footer><span>♡</span><span>◯</span><span>⌁</span><b>Saiba mais</b></footer></article><article class="case-ad facebook-ad"><header><b>facebook</b><span>＋　⌕　☵</span></header><div class="fb-tabs"><b>⌂</b><span>▱</span><span>♧</span><span>▣</span></div><div class="ad-author"><i>${escape(study.mono)}</i><div><b>${escape(study.name)}</b><small>Patrocinado · ◉</small></div><em>•••</em></div><p>${escape(study.ad)}</p><div class="ad-visual" style="background-image:url('${paidCreativeUrl(study, 'facebook')}')"><div><small>PROJETO DEMONSTRATIVO</small><b>${escape(study.headline)}</b></div></div><footer><span>♡ Curtir</span><span>◯ Comentar</span><b>Saiba mais</b></footer></article></div></div>
           </div>
         </div>
       </section>
